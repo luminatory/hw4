@@ -90,6 +90,7 @@ class CountWords {
 		$pattern = "|Преподаватели Source IT(.+?)Полный перечень наших курсов:|is";
 		preg_match ( $pattern, $new_string, $output );
 		$replace = preg_replace ( '/\s|\.|\“|\w\:|\:[^\w]|\ \-\ |\d(?!\-)|\«|\»|\,|\)|\(|\'|\}|\&#160;|\”|\&#8220;|\+|\ \&mdash;\ |&#|\;/', ' ', $output );
+//preg_replace('/![^\w\d\s]*!/','',$output);
 		$words = explode ( " ", $replace [0] );
 		echo "<table>";
 		echo '<tr><th>Words</th><th>Count</th></tr>';
